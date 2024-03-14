@@ -22,7 +22,7 @@ void main() {
 
 #ifdef HOMEWORK
 	const int SIZE = 5;
-	int arr[SIZE], result = 0, min = 1000000, max = 0;
+	int arr[SIZE], result = 0, min, max = 0;
 
 	for (int i = 0; i < SIZE; i++) {
 		cout << "Введите " << i + 1 << "-й элемент массива: "; cin >> arr[i];
@@ -43,6 +43,7 @@ void main() {
 
 	cout << "\nСреднее арифметическое значение элементов массива: " << result / SIZE << endl;
 
+	min = arr[0];
 	for (int i = 0; i < SIZE; i++)
 		if (arr[i] < min) min = arr[i];
 	cout << "\nМинимальный элемент массива: " << min << endl;
