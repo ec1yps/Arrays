@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 using namespace std;
 
 #define tab "\t"
@@ -8,14 +8,14 @@ void main() {
 	const int n = 10;
 	int arr[n] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
-	cout << "Èñõîäíûé ìàññèâ: " << endl;
+	cout << "Ð˜ÑÑ…Ð¾Ð´Ð½Ñ‹Ð¹ Ð¼Ð°ÑÑÐ¸Ð²: " << endl;
 	for (int i = 0; i < n; i++) {
 		cout << arr[i] << tab;
 	}
 	cout << endl;
 
 	int sdvig;
-	cout << "\nÂâåäèòå ÷èñëî ñäâèãîâ: "; cin >> sdvig;
+	cout << "\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾ ÑÐ´Ð²Ð¸Ð³Ð¾Ð²: "; cin >> sdvig;
 	for (int i = 0; i < sdvig; i++) {
 		for (int j = 0; j < n; j++) {
 			if (arr[j] == 9) arr[j] = 0;
@@ -23,7 +23,7 @@ void main() {
 		}
 	}
 
-	cout << "\nÑäâèíóòûé ìàññèâ: " << endl;
+	cout << "\nÐ¡Ð´Ð²Ð¸Ð½ÑƒÑ‚Ñ‹Ð¹ Ð¼Ð°ÑÑÐ¸Ð²: " << endl;
 	for (int i = 0; i < n; i++) {
 		cout << arr[i] << tab;
 	}
