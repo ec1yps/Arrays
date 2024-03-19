@@ -6,7 +6,7 @@ using namespace std;
 void main() {
 	setlocale(LC_ALL, "");
 	const int n = 10;
-	int arr[n] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+	int arr[n] = { 0, 1, 1, 2, 3, 5, 8, 13, 21, 34 };
 
 	cout << "Исходный массив: " << endl;
 	for (int i = 0; i < n; i++) {
@@ -14,13 +14,14 @@ void main() {
 	}
 	cout << endl;
 
-	int sdvig;
-	cout << "\nВведите число сдвигов: "; cin >> sdvig;
-	for (int i = 0; i < sdvig; i++) {
-		for (int j = 0; j < n; j++) {
-			if (arr[j] == 9) arr[j] = 0;
-			else arr[j] += 1;
+	int number_of_shifts;
+	cout << "\nВведите число сдвигов: "; cin >> number_of_shifts;
+	for (int i = 0; i < number_of_shifts; i++) {
+		int buffer = arr[0];
+		for (int j = 1; j < n; j++) {
+			arr[j - 1] = arr[j];
 		}
+		arr[n - 1] = buffer;
 	}
 
 	cout << "\nСдвинутый массив: " << endl;
