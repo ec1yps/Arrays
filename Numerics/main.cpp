@@ -9,6 +9,7 @@ using std::endl;
 
 void main() {
 	setlocale(LC_ALL, "");
+
 	int decimal;
 	cout << "Введите десятичное число: "; cin >> decimal;
 
@@ -36,15 +37,19 @@ void main() {
 	int i = 0;
 	for (; decimal; i++) {
 		hex[i] = decimal % 16;
+		hex[i] += hex[i] < 10 ? 48 : 55;
 		decimal /= 16;
 	}
+	//for (; decimal; hex[i++] = decimal % 16, decimal /= 16);
 
 	for (--i; i >= 0; i--) {
 		/*if (hex[i] < 10)
 			cout << (int)hex[i];
 		else 
 			cout << char(hex[i] + 55);*/
-		cout << (hex[i] < 10 ? char(hex[i] + 48) : char(hex[i] + 55));
+		//cout << char(hex[i] < 10 ? hex[i] + 48 : hex[i] + 55);
+		//cout << char(hex[i] < 10 ? hex[i] + '0' : hex[i] + 'A' - 10);
+		cout << hex[i];
 	}
 	cout << endl;
 #endif // DEC_2_HEX
