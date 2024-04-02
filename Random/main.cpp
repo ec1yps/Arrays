@@ -13,14 +13,15 @@ void main() {
 	int arr[n];
 	int minRand, maxRand;
 
-start:
-	cout << "Введите минимальное случайное число: "; cin >> minRand;
-	cout << "Введите максимальное случайное число: "; cin >> maxRand;
-
-	if (minRand > maxRand || minRand == maxRand) {
-		cout << tab << "\n!!!!!ERROR!!!!!\nВВЕДЕНЫ НЕВЕРНЫЕ ЗНАЧЕНИЯ\n" << endl;
-		goto start;
-	}
+	do {
+		system("CLS");
+		cout << "Введите минимальное случайное число: "; cin >> minRand;
+		cout << "Введите максимальное случайное число: "; cin >> maxRand;
+		if (minRand > maxRand || minRand == maxRand) {
+			std::cerr << tab << "ERROR: введены некорректные значения" << endl;
+			system("pause");
+		}
+	} while (minRand >= maxRand);
 
 	for (int i = 0; i < n; i++) {
 		arr[i] = rand() % (maxRand - minRand) + minRand;
