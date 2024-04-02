@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 using namespace std;
 using std::cin;
 using std::cout;
@@ -14,11 +14,11 @@ void main() {
 	int minRand, maxRand;
 
 start:
-	cout << "Ââåäèòå ìèíèìàëüíîå ñëó÷àéíîå ÷èñëî: "; cin >> minRand;
-	cout << "Ââåäèòå ìàêñèìàëüíîå ñëó÷àéíîå ÷èñëî: "; cin >> maxRand;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¼Ð¸Ð½Ð¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ ÑÐ»ÑƒÑ‡Ð°Ð¹Ð½Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾: "; cin >> minRand;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¼Ð°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ ÑÐ»ÑƒÑ‡Ð°Ð¹Ð½Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾: "; cin >> maxRand;
 
 	if (minRand > maxRand || minRand == maxRand) {
-		cout << "\n!!!!!ERROR!!!!!\n" << endl;
+		cout << tab << "\n!!!!!ERROR!!!!!\nÐ’Ð’Ð•Ð”Ð•ÐÐ« ÐÐ•Ð’Ð•Ð ÐÐ«Ð• Ð—ÐÐÐ§Ð•ÐÐ˜Ð¯\n" << endl;
 		goto start;
 	}
 
